@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>App de presupuesto</title>
+</head>
+
+<body>
+  <main>
+    <div class="container my-3">
+      <div class="row">
+        <h1>PRESUPUESTO APP</h1>
+      </div>
+      <div class="row py-3 gx-5">
+        <div class="col-6">
+          <div class="container py-3 border border-success rounded bg-opacity-10 bg-success">
+            <form>
+              <div class="form-group">
+                <label for="presupuesto" class="form-label fw-bold">Ingresa tu presupuesto:</label>
+                <input type="number" id="presupuesto" name="presupuesto" class="form-control bg-transparent" min="0"
+                  required>
+                <button type="submit" id="calcularSaldo" class="btn btn-success mt-2">Calcular</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-6">
+          <table class="table table-borderless fw-bold">
+            <thead>
+              <tr>
+                <td>PRESUPUESTO</td>
+                <td>GASTOS</td>
+                <td>SALDO</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>$ <span id="campoPresupuesto">0</span></td>
+                <td>$ <span id="campoGastos">0</span></td>
+                <td>$ <span id="campoSaldo">0</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row py-3 gx-5">
+        <div class="col-6">
+          <div class="container py-3 border border-danger rounded bg-opacity-25 bg-danger">
+            <form>
+              <div class="form-group">
+                <label for="nombreGasto" class="form-label fw-bold">Ingresa el nombre del gasto:</label>
+                <input type="text" id="nombreGasto" name="nombreGasto" class="form-control bg-transparent" required>
+                <label for="cantidadGasto" class="form-label fw-bold">Ingresa la cantidad del gasto:</label>
+                <input type="number" id="cantidadGasto" name="cantidadGasto" class="form-control bg-transparent" min="0"
+                  required>
+                <button type="submit" id="anadirGasto" class="btn btn-danger mt-2">Añadir gasto</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-6">
+          <table id="tablaGastos" class="table">
+            <thead class="fw-bold">
+              <tr>
+                <td>GASTO</td>
+                <td>VALOR</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTablaGastos" class="table-group-divider">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
